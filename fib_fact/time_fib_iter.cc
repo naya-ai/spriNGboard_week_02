@@ -7,13 +7,12 @@ using namespace std;
 
 int fib(int N)
 {
-  int fibArr[n+2];
-    fibArr[0] = 0;
-     fibArr[1] = 1;
-    for ( int i = 2; i <= n; ++i){
-      fibArr[i] = fibArr[i-1] + fibArr[i-2];
-      } 
-       return fibArr[n];
+  int f[N+1];
+      f[1] = f[2] = 1;
+     for (int i = 3; i <= N; i++){
+          f[i] = f[i-1] + f[i-2];
+     }
+               return f[N];
 }
 
 int main ()
