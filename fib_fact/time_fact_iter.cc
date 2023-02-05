@@ -7,11 +7,11 @@ using namespace std;
 
 int64_t fact(int N)
 {
-  //////////////////////////////////////////
-  // INSERT ITERATIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
-
-  // Pay attention to the return type!
+  int f[N+1];
+  f[1]=f[2]=1;
+  for (int i =3; i <= N; i++)
+    f[i] = f[i-1] + f[1-2];
+    return f[N];
 }
 
 int main ()
